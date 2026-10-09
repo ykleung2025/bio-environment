@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="小學科學互動（動物版）：觀察動物特徵，推論牠們適應極地還是沙漠，並用證據支持判斷。">
+  <meta property="og:title" content="生物與環境 – 動物">
+  <meta property="og:description" content="觀察動物特徵，判斷牠們適應極地還是沙漠，並用證據支持判斷。">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1f7a6b">
+  <title>生物與環境 – 動物｜小學科學互動</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要內容</a>
+  <header class="site-header">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="18" fill="#fff8ee"/>
+        <circle cx="24" cy="26" r="14" fill="#8ecae6"/>
+        <circle cx="42" cy="38" r="14" fill="#f0b429"/>
+        <path d="M32 14c4 7 4 13 0 20-4-7-4-13 0-20z" fill="#1f7a6b"/>
+      </svg>
+      <div>
+        <p class="eyebrow">小學科學</p>
+        <h1>生物與環境 – 動物</h1>
+      </div>
+    </div>
+    <div class="header-tools">
+      <p id="progress-label" class="progress-label">已完成 0/8</p>
+      <div id="progress-track" class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="8" aria-valuenow="0" aria-labelledby="progress-label">
+        <span id="progress-bar"></span>
+      </div>
+      <button type="button" id="speak-btn" class="btn btn-ghost" aria-pressed="false">朗讀</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="app"></div>
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-actions">
+      <button type="button" id="credits-btn" class="text-btn">資料來源</button>
+      <a class="text-btn" href="teacher.html" target="_blank" rel="noopener noreferrer">給老師</a>
+      <button type="button" id="reset-btn" class="text-btn">清除學習進度</button>
+    </p>
+  </footer>
+  <dialog id="credits-dialog" aria-labelledby="credits-title">
+    <div class="dialog-card">
+      <h2 id="credits-title">資料來源</h2>
+      <p class="dialog-lead">圖片來自維基共享資源。轉載圖片時請保留原授權。</p>
+      <ul class="credits">
+        <li>北極狐：<a href="https://commons.wikimedia.org/wiki/File:Vulpes_lagopus_in_Iceland.jpg">Jonatan Pie</a>，CC0</li>
+        <li>環斑海豹：<a href="https://commons.wikimedia.org/wiki/File:Ringedsealportrait.jpg">Lee Cooper</a>，公有領域</li>
+        <li>皇帝企鵝：<a href="https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg">Ian Duffy</a>，<a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li>
+        <li>雪鴞：<a href="https://commons.wikimedia.org/wiki/File:Bubo_scandiacus_(Linnaeus,_1758)_Male.jpg">Michael Gäbler</a>，<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></li>
+        <li>耳廓狐：<a href="https://commons.wikimedia.org/wiki/File:Fennec_Fox_Ears_(4394678079).jpg">Caninest</a>，<a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li>
+        <li>沙漠陸龜：<a href="https://commons.wikimedia.org/wiki/File:Desert_tortoise_(Gopherus_agassizii).jpg">Robb Hannawacker／約書亞樹國家公園</a>，公有領域</li>
+        <li>沙蜥：<a href="https://commons.wikimedia.org/wiki/File:Secret_Toadhead_Agama_(Phrynocephalus_mystaceus)_(8603768596).jpg">Ron Knight</a>，<a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li>
+        <li>響尾蛇：<a href="https://commons.wikimedia.org/wiki/File:Crotalus_cerastes_(Colorado_Desert_Sidewinder)_(3583100567).jpg">Marshal Hedin</a>，<a href="https://creativecommons.org/licenses/by/2.0/">CC BY 2.0</a></li>
+      </ul>
+      <button type="button" id="credits-close" class="btn btn-primary">關閉</button>
+    </div>
+  </dialog>
+  <div id="live" class="visually-hidden" aria-live="polite"></div>
+  <noscript><p class="noscript">請啟用 JavaScript，才能進行觀察和判斷活動。</p></noscript>
+  <script src="js/app.js?v=3"></script>
+</body>
+</html>

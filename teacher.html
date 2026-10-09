@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="生物與環境 – 動物教師頁。輸入密碼後才顯示學習目標。">
+  <meta property="og:title" content="給老師｜生物與環境 – 動物">
+  <meta property="og:description" content="動物版教師頁。輸入密碼後才顯示學習目標。">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#1f7a6b">
+  <title>給老師｜生物與環境 – 動物</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=3">
+</head>
+<body>
+  <a class="skip" href="#gate">跳到密碼</a>
+  <header class="site-header">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="18" fill="#fff8ee"/>
+        <circle cx="24" cy="26" r="14" fill="#8ecae6"/>
+        <circle cx="42" cy="38" r="14" fill="#f0b429"/>
+        <path d="M32 14c4 7 4 13 0 20-4-7-4-13 0-20z" fill="#1f7a6b"/>
+      </svg>
+      <div>
+        <p class="eyebrow">生物與環境 – 動物</p>
+        <h1>給老師</h1>
+      </div>
+    </div>
+  </header>
+  <main class="gate" id="gate">
+    <section class="gate-card">
+      <h2>學習目標</h2>
+      <p>這頁給老師備課。輸入密碼後才會顯示內容。</p>
+      <form id="gate-form" class="gate-form">
+        <label for="gate-password">密碼</label>
+        <input id="gate-password" name="password" type="password" autocomplete="off" inputmode="numeric" required>
+        <button type="submit" class="btn btn-primary">進入</button>
+        <p id="gate-error" class="gate-error" role="alert" hidden></p>
+      </form>
+    </section>
+    <div id="teacher-content" hidden></div>
+  </main>
+  <noscript><p class="noscript">請啟用 JavaScript，才能輸入密碼。</p></noscript>
+  <script src="js/teacher.js?v=3"></script>
+</body>
+</html>
