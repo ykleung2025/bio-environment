@@ -28,7 +28,7 @@ python3 -m http.server 8080
 4. Branch 選 **main**，資料夾選 **/ (root)**，然後儲存。
 5. 頁面就緒後會出現在 <https://ykleung2025.github.io/bio-environment/>。
 
-已加入 `.nojekyll`，避免 GitHub Pages 的 Jekyll 略過底線開頭的檔案。若要更新樣式或程式而瀏覽器仍顯示舊版，可把 `css/style.css?v=3`、`js/app.js?v=3` 和 `js/teacher.js?v=3` 改成新的版本號。
+已加入 `.nojekyll`，避免 GitHub Pages 的 Jekyll 略過底線開頭的檔案。若要更新樣式或程式而瀏覽器仍顯示舊版，可把 `css/style.css?v=4`、`js/app.js?v=4` 和 `js/teacher.js?v=4` 改成新的版本號。
 
 ## 怎樣玩
 

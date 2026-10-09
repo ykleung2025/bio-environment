@@ -3,6 +3,7 @@
 
   var STORAGE_KEY = "bio-env-done-v1";
   var NEED = 3;
+  var GALLERY_LABEL = "返回觀看其他動物";
 
   var HABITAT = {
     polar: { name: "極地", hint: "冰雪、寒冷" },
@@ -420,7 +421,8 @@
 
   function renderPlay() {
     var org = currentOrg();
-    app.innerHTML = '<div class="play">' + dossierHtml(org) + '<section class="stage">' + stageHtml(org) + "</section></div>";
+    var playClass = state.step === "observe" ? "play is-observe" : "play";
+    app.innerHTML = '<div class="' + playClass + '">' + dossierHtml(org) + '<section class="stage">' + stageHtml(org) + "</section></div>";
     var shaker = state.notice ? app.querySelector('[data-chip="' + state.shakeId + '"]') : null;
     if (shaker) shaker.classList.add("shake");
   }
@@ -429,7 +431,8 @@
     var alias = org.alias ? '<p class="alias">' + esc(org.alias) + "</p>" : "";
     var items = org.observations.map(function (line) { return "<li>" + esc(line) + "</li>"; }).join("");
     var open = state.step === "observe" || window.matchMedia("(min-width: 900px)").matches ? " open" : "";
-    return '<aside class="dossier"><div class="photo-wrap">' + photoHtml(org, "photo") + "</div><div class=\"dossier-body\">"
+    var hero = state.step === "observe" ? " is-hero" : "";
+    return '<aside class="dossier' + hero + '"><div class="photo-wrap">' + photoHtml(org, "photo") + "</div><div class=\"dossier-body\">"
       + "<h2>" + esc(org.name) + "</h2>" + alias
       + '<p class="kind">' + kindLabel(org) + "</p>"
       + "<details class=\"obs-details\"" + open + "><summary>觀察與資料</summary><ul class=\"obs\">" + items + "</ul></details>"
@@ -464,7 +467,7 @@
   function stepBody(org) {
     if (state.step === "observe") {
       return "<h2 class=\"step-title\">看看" + esc(org.name) + "</h2><p class=\"help\">" + esc(org.intro) + "</p>"
-        + actionBar('<button type="button" class="btn btn-secondary" data-action="gallery">所有生物</button>'
+        + actionBar('<button type="button" class="btn btn-secondary" data-action="gallery">' + GALLERY_LABEL + '</button>'
           + '<button type="button" class="btn btn-primary" data-action="next-habitat">下一步：選擇環境</button>');
     }
     if (state.step === "habitat") {
@@ -520,18 +523,18 @@
       var next = nextPending();
       var nextBtn = next
         ? '<button type="button" class="btn btn-primary" id="next-btn" data-action="next-org" data-next="' + esc(next) + '">下一種生物</button>'
-        : '<button type="button" class="btn btn-primary" data-action="gallery">返回列表</button>';
+        : "";
       return '<article class="result-card is-right" data-result="right"><div class="burst" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>'
         + "<h2 class=\"step-title\">判斷正確！</h2><p class=\"choice-recap\">" + esc(org.name) + "適合生活在" + esc(HABITAT[org.habitat].name) + "。</p>"
         + '<p class="explain">' + esc(org.explain) + "</p><p><strong>你找到的證據</strong></p><ul class=\"found\">" + found + "</ul>"
         + '<aside class="eco"><h3>生態安全小貼士</h3><p>' + esc(org.eco) + "</p></aside>"
-        + actionBar('<button type="button" class="btn btn-secondary" id="back-gallery" data-action="gallery">所有生物</button>' + nextBtn) + "</article>";
+        + actionBar('<button type="button" class="btn btn-secondary" id="back-gallery" data-action="gallery">' + GALLERY_LABEL + '</button>' + nextBtn) + "</article>";
     }
     var items = org.observations.map(function (line) { return "<li>" + esc(line) + "</li>"; }).join("");
     return '<article class="result-card is-wrong" data-result="wrong"><h2 class="step-title">再觀察一下</h2>'
       + '<p class="choice-recap">你選了「' + esc(HABITAT[state.habitat].name) + "」。</p>"
       + '<p class="explain">' + esc(org.hint) + "</p><ul class=\"found\">" + items + "</ul>"
-      + actionBar('<button type="button" class="btn btn-secondary" data-action="gallery">所有生物</button>'
+      + actionBar('<button type="button" class="btn btn-secondary" data-action="gallery">' + GALLERY_LABEL + '</button>'
         + '<button type="button" class="btn btn-primary" data-action="retry">重新選擇環境</button>') + "</article>";
   }
 

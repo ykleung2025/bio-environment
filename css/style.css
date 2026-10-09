@@ -476,7 +476,7 @@ main {
 .btn-secondary {
   background: #fff;
   border-color: var(--line);
-  flex: 1 1 140px;
+  flex: 1 1 12em;
 }
 
 .btn-ghost {
@@ -704,6 +704,28 @@ a.text-btn { display: inline-flex; align-items: center; }
   .zone { min-height: 132px; }
   .zone-name { font-size: 1.7rem; }
   .drop-zone { position: static; min-height: 148px; }
+}
+
+.play.is-observe .dossier {
+  display: block;
+  position: static;
+}
+
+.play.is-observe .dossier .photo,
+.play.is-observe .dossier .ph {
+  display: block;
+  width: 100%;
+  height: 50vh;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 900px) {
+  .play.is-observe {
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    align-items: start;
+  }
 }
 
 @media (hover: hover) {
