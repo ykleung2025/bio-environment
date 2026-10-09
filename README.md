@@ -1,6 +1,6 @@
-# 生物與環境
+# 生物與環境 – 動物
 
-小學科學互動網頁，主題是**生物與環境**。學生觀察動植物特徵，判斷牠們適應**極地**還是**沙漠**，再把正確證據放進「我的證據」。
+小學科學互動網頁，主題是**生物與環境 – 動物**。這一版只玩動物。學生觀察動物特徵，判斷牠們適應**極地**還是**沙漠**，再把正確證據放進「我的證據」。植物版會另外製作，不在這個網站裡。
 
 網址（合併到 `main` 並開啟 GitHub Pages 後）：<https://ykleung2025.github.io/bio-environment/>
 
@@ -28,7 +28,7 @@ python3 -m http.server 8080
 4. Branch 選 **main**，資料夾選 **/ (root)**，然後儲存。
 5. 頁面就緒後會出現在 <https://ykleung2025.github.io/bio-environment/>。
 
-已加入 `.nojekyll`，避免 GitHub Pages 的 Jekyll 略過底線開頭的檔案。若要更新樣式或程式而瀏覽器仍顯示舊版，可把 `css/style.css?v=2`、`js/app.js?v=2` 和 `js/teacher.js?v=2` 改成新的版本號。
+已加入 `.nojekyll`，避免 GitHub Pages 的 Jekyll 略過底線開頭的檔案。若要更新樣式或程式而瀏覽器仍顯示舊版，可把 `css/style.css?v=3`、`js/app.js?v=3` 和 `js/teacher.js?v=3` 改成新的版本號。
 
 ## 怎樣玩
 
@@ -46,6 +46,8 @@ python3 -m http.server 8080
 
 學生畫面只保留任務。完整目標在 `teacher.html`（由頁底「給老師」於新分頁開啟）。未輸入正確密碼時，該頁只顯示密碼欄，不會列出學習內容。
 
+課程知識仍包括植物適應環境。這一版的可玩生物全部是動物；植物例子留待植物版或其他課堂。
+
 - 知識和理解：知道一些不同的自然環境；連繫常見的動植物與自然環境；列舉動物和植物適應環境的特徵例子。
 - 技能：進行觀察，根據觀察結果提出合理推論；搜集資料，根據資料作出簡單解釋。
 - 價值觀：欣賞生物適應環境的能力；尊重生命，愛護動植物，保護生態環境。
@@ -53,9 +55,9 @@ python3 -m http.server 8080
 
 ## 活動生物
 
-極地：北極狐、環斑海豹、皇帝企鵝（南極）、北極罌粟（植物）。
+極地：北極狐、環斑海豹、皇帝企鵝（南極）、雪鴞。
 
-沙漠：耳廓狐（芬內克狐）、沙漠陸龜、沙蜥、仙人掌（桶形仙人掌，植物）。
+沙漠：耳廓狐（芬內克狐）、沙漠陸龜、沙蜥、響尾蛇（角響尾蛇，*Crotalus cerastes*）。
 
 沙漠陸龜指北美沙漠陸龜（*Gopherus agassizii*）。沙蜥照片為蟾頭沙蜥（*Phrynocephalus mystaceus*）。本活動不使用北極熊、海象、刺蝟、駱駝、狐獴、非洲盾臂龜、非洲跳鼠。
 
@@ -68,8 +70,8 @@ python3 -m http.server 8080
 | 北極狐 | Jonatan Pie | [CC0](http://creativecommons.org/publicdomain/zero/1.0/) | [Vulpes lagopus in Iceland](https://commons.wikimedia.org/wiki/File:Vulpes_lagopus_in_Iceland.jpg) |
 | 環斑海豹 | Lee Cooper | 公有領域 | [Ringedsealportrait](https://commons.wikimedia.org/wiki/File:Ringedsealportrait.jpg) |
 | 皇帝企鵝 | Ian Duffy | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | [Aptenodytes forsteri, Snow Hill Island](https://commons.wikimedia.org/wiki/File:Aptenodytes_forsteri_-Snow_Hill_Island,_Antarctica_-adults_and_juvenile-8.jpg) |
-| 北極罌粟 | Graham | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) | [Papaver radicatum flowers](https://commons.wikimedia.org/wiki/File:Papaver_radicatum_flowers.jpg) |
+| 雪鴞 | Michael Gäbler | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | [Bubo scandiacus male](https://commons.wikimedia.org/wiki/File:Bubo_scandiacus_(Linnaeus,_1758)_Male.jpg) |
 | 耳廓狐 | Caninest | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | [Fennec Fox Ears](https://commons.wikimedia.org/wiki/File:Fennec_Fox_Ears_(4394678079).jpg) |
 | 沙漠陸龜 | Robb Hannawacker／約書亞樹國家公園 | 公有領域 | [Desert tortoise (Gopherus agassizii)](https://commons.wikimedia.org/wiki/File:Desert_tortoise_(Gopherus_agassizii).jpg) |
 | 沙蜥 | Ron Knight | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | [Phrynocephalus mystaceus](https://commons.wikimedia.org/wiki/File:Secret_Toadhead_Agama_(Phrynocephalus_mystaceus)_(8603768596).jpg) |
-| 仙人掌 | Bernard Gagnon | [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) | [Fishhook Barrel Cactus](https://commons.wikimedia.org/wiki/File:Fishhook_Barrel_Cactus.jpg) |
+| 響尾蛇 | Marshal Hedin | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) | [Colorado Desert Sidewinder](https://commons.wikimedia.org/wiki/File:Crotalus_cerastes_(Colorado_Desert_Sidewinder)_(3583100567).jpg) |

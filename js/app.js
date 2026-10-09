@@ -18,9 +18,10 @@
     "sea-ice": "能在海冰上休息",
     "dense-feather": "密羽毛防水保暖",
     huddle: "互相靠攏取暖",
-    "short-season": "短季節快速開花",
-    "low-plant": "植株矮小貼地避風",
-    "follow-sun": "花朵隨著陽光取暖",
+    "white-feather": "白色羽毛作保護色",
+    "thick-down": "厚羽毛保暖",
+    "feathered-feet": "腳趾有羽毛保暖",
+    sidewind: "側行減少接觸熱沙",
     "big-ears": "大耳朵散熱",
     "pale-coat": "淺色毛皮反射陽光",
     nocturnal: "夜晚活動避開高溫",
@@ -29,10 +30,7 @@
     "store-water": "體內儲存水分",
     "sand-color": "體色像沙地",
     scales: "鱗片減少失水",
-    "bury-sand": "躲進沙子裡避熱",
-    succulent: "肉質莖儲水",
-    spines: "葉退化成刺",
-    "shallow-roots": "淺根快速吸水"
+    "bury-sand": "躲進沙子裡避熱"
   };
 
   var ORGANISMS = [
@@ -52,31 +50,31 @@
         "腳掌也長了毛，在雪地上比較保暖。"
       ],
       evidence: ["thick-fur", "white-coat", "small-ears"],
-      chips: ["thick-fur", "white-coat", "small-ears", "big-ears", "succulent", "spines", "burrow", "nocturnal"],
+      chips: ["thick-fur", "white-coat", "small-ears", "big-ears", "burrow", "nocturnal", "blubber", "scales"],
       hint: "厚毛皮和細小的耳朵，都是為了保住身體的熱。想一想：哪一種環境特別寒冷？",
       explain: "北極狐有厚毛皮、白色保護色和較短的耳朵，這些特徵幫助牠在極地保暖，也不容易在雪地裡被發現。",
       eco: "良好的生態環境是動物的家，也關係民生福祉。極地冰雪很脆弱，節約能源、減少浪費，就是在保護生態。"
     },
     {
-      id: "cactus",
-      name: "仙人掌",
-      alias: "桶形仙人掌",
-      kind: "plant",
+      id: "sidewinder",
+      name: "響尾蛇",
+      alias: "角響尾蛇",
+      kind: "animal",
       habitat: "desert",
-      image: "images/barrel-cactus.jpg",
-      alt: "一株長滿尖刺、莖部肥厚的桶形仙人掌",
-      emoji: "🌵",
-      intro: "先看照片，再讀資料。這是沙漠裡的桶形仙人掌，莖又綠又肥。",
+      image: "images/sidewinder.jpg",
+      alt: "一條體色像沙子的角響尾蛇盤在沙地上",
+      emoji: "🐍",
+      intro: "先看照片，再讀資料。角響尾蛇生活在很熱的沙漠沙地。",
       observations: [
-        "莖肥厚多汁，可以儲存很多水分。",
-        "葉子變成尖刺，減少水分蒸發，也能阻止動物咬食。",
-        "根長得又淺又廣，一下雨就趕快吸水。"
+        "身上的顏色像沙地，不容易被發現。",
+        "牠用側行的方式移動，身體較少貼著燙熱的沙。",
+        "多在清晨、黃昏或夜晚活動，避開最熱的時候。"
       ],
-      evidence: ["succulent", "spines", "shallow-roots"],
-      chips: ["succulent", "spines", "shallow-roots", "blubber", "big-ears", "white-coat", "huddle", "dense-feather"],
-      hint: "肉質莖用來儲水，葉子變成刺是為了減少失水。哪一種環境很少下雨？",
-      explain: "仙人掌用肥厚的莖儲水，把葉退化成刺，再用淺而廣的根吸收雨水。這些都是適應沙漠缺水環境的特徵。",
-      eco: "仙人掌很會儲水，也提醒我們珍惜水資源。善用地球資源，可以從節約用水做起。"
+      evidence: ["sand-color", "sidewind", "nocturnal"],
+      chips: ["sand-color", "sidewind", "nocturnal", "blubber", "white-coat", "thick-fur", "huddle", "feathered-feet"],
+      hint: "側行和夜晚活動，都是為了少碰燙沙、避開高溫。哪一種環境的地面特別熱？",
+      explain: "角響尾蛇的體色像沙地，側行可以減少接觸熱沙，又會在較涼的時候出來。這些特徵幫助牠生活在沙漠。",
+      eco: "響尾蛇是沙漠生態的一分子。看見蛇不要傷害牠。尊重生命，生態才會保持完整。"
     },
     {
       id: "penguin",
@@ -94,7 +92,7 @@
         "翅膀像鰭，適合在海裡游泳找食物。"
       ],
       evidence: ["blubber", "dense-feather", "huddle"],
-      chips: ["blubber", "dense-feather", "huddle", "big-ears", "succulent", "white-coat", "burrow", "short-season"],
+      chips: ["blubber", "dense-feather", "huddle", "big-ears", "sidewind", "burrow", "sand-color", "nocturnal"],
       hint: "密羽毛、厚脂肪和擠在一起，都是為了對抗嚴寒。再選一次環境吧。",
       explain: "皇帝企鵝生活在南極。南極和北極一樣，都是寒冷的極地。厚脂肪、密羽毛和互相靠攏，幫助牠們在冰雪中保暖。",
       eco: "生物與環境互相依存。南極生態一旦受破壞便很難恢復，我們要一起保育環境。"
@@ -115,31 +113,31 @@
         "沙子太熱的時候，牠會躲進沙子裡。"
       ],
       evidence: ["sand-color", "scales", "bury-sand"],
-      chips: ["sand-color", "scales", "bury-sand", "blubber", "white-coat", "succulent", "follow-sun", "dense-feather"],
+      chips: ["sand-color", "scales", "bury-sand", "blubber", "white-coat", "thick-fur", "feathered-feet", "dense-feather"],
       hint: "體色像沙，又會躲進沙子裡，這些特徵跟炎熱、缺水的地方有關。",
       explain: "沙蜥的體色像沙地，鱗片能減少失水，太熱時還會躲進沙裡。所以牠適合生活在沙漠。",
       eco: "細小的生物也是生態的一部分。愛護牠們，就是保護整個環境，也是保護生物物種安全。"
     },
     {
-      id: "arctic-poppy",
-      name: "北極罌粟",
+      id: "snowy-owl",
+      name: "雪鴞",
       alias: "",
-      kind: "plant",
+      kind: "animal",
       habitat: "polar",
-      image: "images/arctic-poppy.jpg",
-      alt: "幾朵黃色的北極罌粟在低矮的植株上開放",
-      emoji: "🌼",
-      intro: "先看照片，再讀資料。北極罌粟是極地植物，要抓緊很短的夏天開花。",
+      image: "images/snowy-owl.jpg",
+      alt: "一隻白色雪鴞停在樹枝上，羽毛厚密，腳趾也有羽毛",
+      emoji: "🦉",
+      intro: "先看照片，再讀資料。雪鴞是生活在極地的大貓頭鷹。",
       observations: [
-        "極地的夏天很短，它會趕快開花結果。",
-        "植株矮矮的，貼著地面，比較不怕強風。",
-        "杯狀的花朵會隨著太陽轉，幫助吸收熱量。"
+        "羽毛大多是白色的，在雪地裡不容易被發現。",
+        "羽毛又厚又密，幫助在嚴寒中保暖。",
+        "腳趾也蓋著羽毛，好像穿了雪靴。"
       ],
-      evidence: ["short-season", "low-plant", "follow-sun"],
-      chips: ["short-season", "low-plant", "follow-sun", "blubber", "big-ears", "succulent", "hard-shell", "white-coat"],
-      hint: "它要在很短的溫暖日子裡趕快開花，又要貼著地面避風。這比較像哪一種環境？",
-      explain: "北極罌粟長得很矮，可以避風；花朵跟著太陽轉來取暖；又會在短短的生長季節趕快開花。這些都是適應極地的方法。",
-      eco: "野生植物留在原地最安全。不要採摘，讓極地植物可以繼續開花結果。"
+      evidence: ["white-feather", "thick-down", "feathered-feet"],
+      chips: ["white-feather", "thick-down", "feathered-feet", "big-ears", "burrow", "scales", "store-water", "pale-coat"],
+      hint: "白色羽毛和腳上的羽毛，都是為了在冰雪裡隱藏和保暖。哪一種環境特別寒冷？",
+      explain: "雪鴞有白色羽毛作保護色，厚羽毛和蓋著羽毛的腳趾幫助牠在極地保暖。",
+      eco: "雪鴞要在完整的極地環境裡覓食。保護棲息地，就是保護生物和環境互相依存的關係。"
     },
     {
       id: "desert-tortoise",
@@ -157,7 +155,7 @@
         "身體可以儲存水分，耐得住很久不下雨。"
       ],
       evidence: ["hard-shell", "burrow", "store-water"],
-      chips: ["hard-shell", "burrow", "store-water", "thick-fur", "big-ears", "dense-feather", "spines", "huddle"],
+      chips: ["hard-shell", "burrow", "store-water", "thick-fur", "big-ears", "dense-feather", "huddle", "white-feather"],
       hint: "挖地洞和儲存水分，都是為了應付炎熱和缺水。再想想環境吧。",
       explain: "沙漠陸龜會挖地洞避開酷熱，硬殼有助減少失水，身體又能儲存水分，所以適合乾旱的沙漠。",
       eco: "尊重生命，看見陸龜不要捉走。野生動物應該留在原來的環境。"
@@ -178,7 +176,7 @@
         "牠會爬上海冰休息，也在冰下找食物。"
       ],
       evidence: ["blubber", "streamline", "sea-ice"],
-      chips: ["blubber", "streamline", "sea-ice", "big-ears", "succulent", "white-coat", "spines", "shallow-roots"],
+      chips: ["blubber", "streamline", "sea-ice", "big-ears", "white-coat", "nocturnal", "sand-color", "sidewind"],
       hint: "厚脂肪和海冰都跟冰冷的水域有關。極地和沙漠，哪裡會有海冰？",
       explain: "環斑海豹靠厚脂肪在冷水中保暖，流線形的身體方便游泳，也會在海冰上休息。這些特徵配合有冰的極地海洋。",
       eco: "海洋乾淨，海豹才有安全的家。不要亂丟垃圾，一起保護海洋和生物物種安全。"
@@ -199,7 +197,7 @@
         "牠多在夜晚出來活動，避開白天的高溫。"
       ],
       evidence: ["big-ears", "pale-coat", "nocturnal"],
-      chips: ["big-ears", "pale-coat", "nocturnal", "blubber", "small-ears", "white-coat", "succulent", "short-season"],
+      chips: ["big-ears", "pale-coat", "nocturnal", "blubber", "small-ears", "white-coat", "feathered-feet", "huddle"],
       hint: "大大的耳朵用來散熱，夜晚才出來是為了避開高溫。哪一種環境又熱又乾？",
       explain: "耳廓狐的大耳朵幫助散熱，淺色毛皮可以反射陽光，夜晚活動則避開沙漠白天的酷熱。",
       eco: "沙漠看起來空曠，仍然是許多生物的家。不要破壞植被，珍惜這些棲息地。"
@@ -285,8 +283,10 @@
 
   function validateData() {
     var banned = ["北極熊", "海象", "刺蝟", "駱駝", "狐獴", "非洲盾臂龜", "非洲跳鼠"];
-    var plants = { polar: 0, desert: 0 };
+    var habitats = { polar: 0, desert: 0 };
+    if (ORGANISMS.length !== 8) throw new Error("count");
     ORGANISMS.forEach(function (org) {
+      if (org.kind !== "animal") throw new Error("not animal " + org.id);
       if (org.evidence.length < NEED) throw new Error("evidence " + org.id);
       org.evidence.forEach(function (id) {
         if (!EVIDENCE[id] || org.chips.indexOf(id) === -1) throw new Error("chip " + org.id + " " + id);
@@ -294,9 +294,9 @@
       if (banned.some(function (word) { return org.name.indexOf(word) !== -1; })) {
         throw new Error("banned " + org.name);
       }
-      if (org.kind === "plant") plants[org.habitat] += 1;
+      habitats[org.habitat] += 1;
     });
-    if (!plants.polar || !plants.desert) throw new Error("plants");
+    if (!habitats.polar || !habitats.desert) throw new Error("habitats");
   }
 
   function photoHtml(org, className) {
