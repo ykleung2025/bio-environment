@@ -44,7 +44,6 @@
       habitat: "polar",
       image: "images/arctic-fox.jpg",
       alt: "一隻白色北極狐走在積雪的山坡上",
-      credit: "Jonatan Pie，CC0",
       emoji: "🦊",
       intro: "先看照片，再讀資料。北極狐是生活在寒冷地區的狐狸。",
       observations: [
@@ -66,7 +65,6 @@
       habitat: "desert",
       image: "images/barrel-cactus.jpg",
       alt: "一株長滿尖刺、莖部肥厚的桶形仙人掌",
-      credit: "Bernard Gagnon，CC BY-SA 3.0",
       emoji: "🌵",
       intro: "先看照片，再讀資料。這是沙漠裡的桶形仙人掌，莖又綠又肥。",
       observations: [
@@ -88,7 +86,6 @@
       habitat: "polar",
       image: "images/emperor-penguin.jpg",
       alt: "一隻成年皇帝企鵝和一隻幼企鵝站在南極的雪地上",
-      credit: "Ian Duffy，CC BY 2.0",
       emoji: "🐧",
       intro: "先看照片，再讀資料。皇帝企鵝生活在南極。南極終年冰雪，也是極地。",
       observations: [
@@ -110,7 +107,6 @@
       habitat: "desert",
       image: "images/sand-lizard.jpg",
       alt: "一隻體色像沙子的沙蜥趴在沙地上",
-      credit: "Ron Knight，CC BY 2.0",
       emoji: "🦎",
       intro: "先看照片，再讀資料。沙蜥常在乾熱的沙地上活動。",
       observations: [
@@ -132,7 +128,6 @@
       habitat: "polar",
       image: "images/arctic-poppy.jpg",
       alt: "幾朵黃色的北極罌粟在低矮的植株上開放",
-      credit: "Graham，CC BY-SA 2.0",
       emoji: "🌼",
       intro: "先看照片，再讀資料。北極罌粟是極地植物，要抓緊很短的夏天開花。",
       observations: [
@@ -154,7 +149,6 @@
       habitat: "desert",
       image: "images/desert-tortoise.jpg",
       alt: "一隻沙漠陸龜在沙地上行走，背上有堅硬的殼",
-      credit: "Robb Hannawacker／約書亞樹國家公園，公有領域",
       emoji: "🐢",
       intro: "先看照片，再讀資料。沙漠陸龜行動慢，卻很會應付乾旱。",
       observations: [
@@ -176,7 +170,6 @@
       habitat: "polar",
       image: "images/ringed-seal.jpg",
       alt: "一隻環斑海豹的特寫，毛皮上有淺色環紋",
-      credit: "Lee Cooper，公有領域",
       emoji: "🦭",
       intro: "先看照片，再讀資料。環斑海豹常在有海冰的寒冷海洋生活。",
       observations: [
@@ -198,7 +191,6 @@
       habitat: "desert",
       image: "images/fennec-fox.jpg",
       alt: "耳廓狐的頭部特寫，可見一對很大的耳朵",
-      credit: "Caninest，CC BY 2.0",
       emoji: "🦊",
       intro: "先看照片，再讀資料。耳廓狐最顯眼的地方，是那對很大的耳朵。",
       observations: [
@@ -441,7 +433,7 @@
       + "<h2>" + esc(org.name) + "</h2>" + alias
       + '<p class="kind">' + kindLabel(org) + "</p>"
       + "<details class=\"obs-details\"" + open + "><summary>觀察與資料</summary><ul class=\"obs\">" + items + "</ul></details>"
-      + '<p class="credit">圖片：' + esc(org.credit) + "</p></div></aside>";
+      + "</div></aside>";
   }
 
   function stageHtml(org) {
@@ -869,6 +861,19 @@
     } else {
       window.speechSynthesis.cancel();
     }
+  });
+
+  var creditsDialog = document.getElementById("credits-dialog");
+  document.getElementById("credits-btn").addEventListener("click", function () {
+    if (typeof creditsDialog.showModal === "function") creditsDialog.showModal();
+    else creditsDialog.setAttribute("open", "");
+  });
+  document.getElementById("credits-close").addEventListener("click", function () {
+    if (typeof creditsDialog.close === "function") creditsDialog.close();
+    else creditsDialog.removeAttribute("open");
+  });
+  creditsDialog.addEventListener("click", function (event) {
+    if (event.target === creditsDialog && typeof creditsDialog.close === "function") creditsDialog.close();
   });
 
   document.getElementById("reset-btn").addEventListener("click", function () {

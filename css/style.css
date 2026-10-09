@@ -244,12 +244,6 @@ main {
 
 .obs li { margin: 6px 0; }
 
-.credit {
-  margin-top: 10px;
-  color: var(--ink-soft);
-  font-size: 0.75rem;
-}
-
 .stage { padding: 14px; }
 
 .steps {
@@ -579,41 +573,47 @@ main {
   font-size: 0.92rem;
 }
 
-.teacher {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: 18px;
-  padding: 10px 14px;
-  margin-bottom: 12px;
-}
-
-.teacher summary {
-  font-weight: 800;
-  color: var(--ink);
-  cursor: pointer;
-  min-height: 44px;
+.footer-actions {
   display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
   align-items: center;
 }
 
-.teacher-body {
-  display: grid;
-  gap: 10px;
-  padding: 8px 0 4px;
+dialog {
+  border: 0;
+  padding: 0;
+  background: transparent;
+  max-width: min(560px, calc(100vw - 24px));
+  color: var(--ink);
 }
 
-.teacher h2 { font-size: 1rem; color: var(--ink); }
+dialog::backdrop { background: rgba(36, 48, 40, 0.48); }
 
-.teacher ul { margin: 6px 0 0; padding-left: 1.2rem; }
+.dialog-card,
+.gate-card,
+.teacher-panel {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
 
-.footer-note { margin: 8px 0; }
+.dialog-card { padding: 18px 18px 16px; }
+
+.dialog-card h2,
+.gate-card h2 { font-size: 1.4rem; margin-bottom: 8px; }
+
+.dialog-lead { color: var(--ink-soft); margin-bottom: 10px; }
 
 .credits {
-  margin: 0;
+  margin: 0 0 14px;
   padding-left: 1.15rem;
 }
 
-.credits li { margin: 4px 0; }
+.credits li { margin: 6px 0; }
+
+.dialog-card .btn-primary { width: 100%; }
 
 .text-btn {
   background: none;
@@ -624,6 +624,48 @@ main {
   padding: 8px 0;
   text-decoration: underline;
 }
+
+a.text-btn { display: inline-flex; align-items: center; }
+
+.gate {
+  width: min(720px, calc(100% - 28px));
+  margin: 28px auto 40px;
+}
+
+.gate-card { padding: 22px 20px 18px; }
+
+.gate-card p { color: var(--ink-soft); margin-bottom: 14px; }
+
+.gate-form { display: grid; gap: 8px; }
+
+.gate-form label { font-weight: 800; }
+
+.gate-form input {
+  min-height: 52px;
+  border-radius: 14px;
+  border: 2px solid var(--line);
+  padding: 10px 14px;
+  background: #fff;
+}
+
+.gate-error {
+  margin: 4px 0 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: #fff1ea;
+  color: #8a3418;
+  font-weight: 800;
+}
+
+.teacher-panel { margin-top: 16px; padding: 8px 18px 16px; }
+
+.teacher-panel section { padding: 12px 0; border-top: 1px solid var(--line); }
+
+.teacher-panel h2 { font-size: 1.15rem; margin-bottom: 6px; }
+
+.teacher-panel ul { margin: 6px 0 0; padding-left: 1.2rem; }
+
+.teacher-panel p { margin-top: 6px; }
 
 .noscript {
   width: min(1080px, calc(100% - 28px));
